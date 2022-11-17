@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>fragment 사용하기</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/js/jquery-3.6.1.js"></script>
     <script src="/js/bootstrap.bundle.js"></script>
 </head>
 <body>
-$END$
+<header class="container my-4 pt-4" th:fragment="frag-header">
+  <div class="container-fluid p-5 bg-secondary bg-opacity-10 rounded-3">
+    <h1 class="display-4 text-center">Header 영역</h1>
+    <p class="text-muted lead text-center">fragment를 사용하여 가져온 header 파일</p>
+  </div>
+</header>
+<header class="container my-4 pt-4" th:fragment="frag-head01(item1,item2)">
+    <div class="container-fluid p-5 bg-secondary bg-opacity-10 rounded-3">
+        <h1 class="display-4 text-center">Header 영역</h1>
+        <p class="text-muted lead text-center">fragment를 사용하여 가져온 header01 파일
+        <p th:text="|매개변수 item : ${item1}|"></p>
+        <p th:text="|매개변수 item : ${item2}|"></p>
+    </div>
+</header>
+
+
 </body>
 </html>

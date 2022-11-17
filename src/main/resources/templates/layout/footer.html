@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>fragment 사용하기</title>
     <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/js/jquery-3.6.1.js"></script>
     <script src="/js/bootstrap.bundle.js"></script>
 </head>
 <body>
-$END$
+<footer class="container-fluid mt-5 p-5 border-top" th:fragment="frag-footer">
+    <p class="text-center">fragment로 가져온 footer 영역</p>
+    <p class="text-center lead text-muted">made by java505</p>
+</footer>
+<footer class="container-fluid bg-info m-3 p-5 rounded-5 bg-opacity-25" th:fragment="frag-foot01">
+    <p class="text-center"> fragment로 가져온 frag-foot 02번 영역</p>
+</footer>
+<footer class="container-fluid bg-success m-3 p-5 rounded-5 bg-opacity-25" th:fragment="frag-foot02">
+    <p class="text-center"> fragment로 가져온 frag-foot 02번 영역</p>
+
+</footer>
 </body>
 </html>
